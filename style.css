@@ -1,0 +1,471 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body, html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+button{
+    border: none;
+    cursor: pointer;
+}
+
+
+.navigation ul{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: transform 0.3 ease;
+    z-index: 10;
+}
+.navigation.hidden{
+    transform: translateY(-100%);
+}
+.navigation ul li a{
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.navigation ul li a:hover{
+    -webkit-animation: glow1 1s ease-in-out infinite alternate;
+    -moz-animation: glow1 1s ease-in-out infinite alternate;
+    animation: glow1 1s ease-in-out infinite alternate;
+}
+.dropbtn{
+    background: none; 
+    font-size: 18px; 
+    font-family: 'Times New Roman', Times, serif; 
+    color: white;
+    transition: color 0.3s;
+    text-transform: uppercase;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content .adrop {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+.dropdown-content a:hover {background-color: black; color: black;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn{color: red;     -webkit-animation: glow1 1s ease-in-out infinite alternate;
+    -moz-animation: glow1 1s ease-in-out infinite alternate;
+    animation: glow1 1s ease-in-out infinite alternate;}
+#content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas: 
+    "title title . ."
+    "title title content-paragraph content-paragraph"
+    "title title btn-explore btn-signup"
+    "subtitle subtitle . ."; 
+    background-image: linear-gradient(rgba(0, 23, 55, 0.5), rgba(0, 23, 55, 0.5)), url("assets/dltc/vhl0.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#content .title{
+    grid-area: title;
+    position: relative;
+}
+#content .title p{
+    position: absolute;
+    font-size: clamp(55px, 8vw, 55px);
+    top: 35%;
+    right: 20%; 
+    color: white;
+    letter-spacing: 0.8px;
+    white-space: nowrap;
+    font-family: "Playwrite BE WAL", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+#content .subtitle{
+    grid-area: subtitle;
+    position: relative;
+}
+#content .subtitle p{
+    font-size: clamp(20px, 2vw, 30px);
+    position: absolute;
+    right: 20%;
+    color: white;
+    letter-spacing: 2px;
+    font-family: "Josefin Sans", sans-serif;
+    white-space: nowrap;
+}
+#content .content-paragraph{
+    grid-area: content-paragraph;
+}
+#content .content-paragraph{
+    font-size: clamp(10px, 2vw, 25px);
+    color: white;
+    font-family: "Roboto", serif;
+    padding-right: 10px;
+}
+#content .btn-explore{
+    grid-area: btn-explore;
+    position: relative;
+}
+#content .btn-explore button{
+    background: #0070af;
+    color: white;
+    width: 40%;
+    height: 30%;
+    border-radius: 15px;
+    position: absolute;
+    right: 30%;
+    top: 5%;
+    transition: scale 1s ease;
+}
+#content .btn-explore button:hover{
+    background-color: black;
+    scale: 1.1;
+}
+#content .btn-signup{
+    grid-area: btn-signup;
+    position: relative;
+}
+#content .btn-signup button{
+    background: none;
+    border-color: #0070af;
+    border-width: 3px;
+    border-style: solid;
+    color: white;
+    width: 40%;
+    height: 30%;
+    border-radius: 15px;
+    position: absolute;
+    right: 60%;
+    top: 5%;
+}
+#content .btn-signup button:hover{
+    transition: background-color 0.5s ease-in;
+    background-color: #0070af;
+}
+#Home{
+    width: 100%;
+    background-color: #f0f0f0;
+    font-size: 24px;
+    color: #333;
+}
+.section{
+    width: 100%;
+    height: 100vh;
+    display: grid; 
+    background: rgb(47,0,255);
+    background: linear-gradient(90deg, rgba(47,0,255,1) 0%, rgba(180,91,242,1) 20%, rgba(3,105,255,1) 74%, rgba(205,162,162,1) 100%);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "title title title title title title"
+      "img1 img1 img1 img2 img2 img2"
+      "img1 img1 img1 img2 img2 img2"
+      "img3 img3 img3 img4 img4 img4"
+      "img3 img3 img3 img4 img4 img4"
+      "img5 img5 img5 img6 img6 img6"
+      "img5 img5 img5 img6 img6 img6"; 
+}
+.section .title{
+    grid-area: title;
+    text-align: center;
+    font-size: 60px;
+    padding-top: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 
+      -1px -1px 0 black, 
+      1px -1px 0 black,  
+      -1px 1px 0 black, 
+      1px 1px 0 black;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+.section .img1{
+    grid-area: img1;
+    position: relative;
+}
+.section div{
+    border: 0;
+    transition: border 0.3s ease-in;
+}
+.section p:not(.overlay-p){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+}
+.section div .imgMain{
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    transform: translate(-50%, -50%);
+}
+.section div .imgCover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(1px);
+    filter: brightness(0.05);
+}
+.section .img2{
+    grid-area: img2;
+    position: relative;
+
+}
+.section .img3{
+    grid-area: img3;
+    position: relative;
+}
+.section .img4{
+    grid-area: img4;
+    position: relative;
+}
+.section .img5{
+    grid-area: img5;
+    position: relative;
+}
+.section .img6{
+    grid-area: img6;
+    position: relative;
+}
+.section div:hover .imgMain{
+    scale: 1.01;
+    filter: brightness(0.4);
+    cursor: pointer;
+}
+.section div:hover .text{
+    opacity: 1;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+.section .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center; 
+    z-index: 9999;
+    transition: display 1s ease-in;
+}
+.section .overlay .overlay-content{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(91,91,242,1) 20%, rgba(0,212,255,1) 100%);
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.section .overlay .overlay-title {
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.section .overlay .overlay-body {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1; 
+}
+.section .overlay .overlay-image {
+    flex: 1;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    position: relative;
+    height: 500px;
+}
+.section .overlay .overlay-image img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    animation: moveUpOverlay 6s linear infinite;
+}
+.section .overlay .overlay-image img:nth-child(1){animation-delay: 0s;}
+.section .overlay .overlay-image img:nth-child(2){animation-delay: 2s;}
+.section .overlay .overlay-image img:nth-child(3){animation-delay: 4s;}
+@keyframes moveUpOverlay {
+    0% { bottom: -100%; }
+    100% { bottom: 100%; }
+}
+.section .overlay .overlay-text {
+    flex: 2;
+    overflow-y: auto;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 20px;
+}
+.section .overlay .overlay-text ul{
+    margin-top: auto;
+}
+.section .overlay .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white; 
+    font-weight: bold;
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%; 
+    background-color: red; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border: none; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.section .overlay .close-button:hover {
+    background-color: darkred; 
+    transform: scale(1.2); 
+    color: white;
+}
+#About{
+    width: 100%;
+    background-color: #f0f0f0;
+    font-size: 24px;
+    color: #333;
+}
+#About .sectionAbout{
+    background: none;
+    width: 100%;
+    height: 100vh;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "title title title title"
+      "item1 item1 item2 item2"
+      "item1 item1 item2 item2"
+      "item3 item3 item4 item4"
+      "item3 item3 item4 item4"; 
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd, #c2e9fb);
+    background-size: 300% 300%; 
+    animation: gradientAnimation 10s infinite alternate;
+    perspective: 1000px; 
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+#About .sectionAbout div img{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#About .sectionAbout div p{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  .title { grid-area: title; text-align: center; padding-top: 40px; }
+  .item1 { grid-area: item1; position: relative; }
+  .item2 { grid-area: item2; position: relative; }
+  .item3 { grid-area: item3; position: relative; }
+  .item4 { grid-area: item4; position: relative; }
+
+#footer{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    background-color: black;
+    color: red;
+    font-weight: bold;
+    padding: 5px;
+}
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+  @keyframes glow1 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000, 0 0 70px #ff0000;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4d4d, 0 0 40px #ff4d4d, 0 0 50px #ff4d4d, 0 0 60px #ff4d4d, 0 0 70px #ff4d4d, 0 0 80px #ff4d4d;
+    }
+  }
+.animate__animated {
+    will-change: transform, opacity;
+}
+  

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viet Nam Travel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playwrite+BE+WAL:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div id="content" style="width: 100vw; height: 100vh;">
+        <div class="title">
+            <p class="animate__animated animate__tada animate__slower">DU LỊCH<br>VIỆT NAM</p>
+        </div>
+        <div class="subtitle animate__animated animate__slideInUp animate__delay-2s">
+            <p>
+                Hành trình khám phá vẻ đẹp bất tận
+            </p>
+        </div>
+        <div class="content-paragraph animate__animated animate__fadeIn animate__delay-2s">
+            <p>
+                Dự án du lịch vòng quanh Việt Nam được tạo bởi các thành viên đẳng cấp giúp mọi người có thể khám phá vẻ đẹp của những kì quan Việt Nam trực tuyến mà không cần phải đi đâu xa...
+            </p>
+        </div>
+        <div class="btn-explore" onclick="scrollToHome(); changeOpacity();">
+            <button class="animate__animated animate__bounce animate__slower" type="button">Khám phá ngay <i class="fa-solid fa-magnifying-glass" style="transform: translate(1px,2px);"></i></button>
+        </div>
+        <div class="btn-signup" onclick="scrollToContact()">
+            <button class="animate__animated animate__jello animate__slower" type="button">Liên hệ <i class="fa-solid fa-arrow-right fa-1x" style="transform: translate(1px, 1 px);"></i></button>
+        </div>
+        <div class="background-color"></div>
+    </div>
+    <div class="navigation">
+        <ul>
+            <li><a href="#About">Thành viên</a></li>
+            <li><a href="#content">Trang chủ</a></li>
+            <li>
+                <div class="dropdown">
+                    <button type="button" class="dropbtn">Khám Phá</button>
+                    <div class="dropdown-content">
+                        <a class="adrop" href="#North">Bắc</a>
+                        <a class="adrop" href="#Central">Trung</a>
+                        <a class="adrop" href="#South">Nam</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="Home">
+        <div class="section" id="North">
+            <div class="title">Miền Bắc</div>
+            <div class="img1">
+                <img src="assets/dltc/vhl1.jpg" alt="" class="imgCover">
+                <img src="assets/dltc/vhl1.jpg" alt="" class="imgMain" id="image1">
+                <p id="textimage1" class="text">Vịnh Hạ Long</p>
+                <div id="overlay1" class="overlay">
+                    <div class="overlay-content">
+                        <span class="close-button" data-target="overlay1">&times;</span>
+                        <div class="overlay-title">
+                            <h1>Vịnh Hạ Long</h1>
+                        </div>
+                        <div class="overlay-body">
+                            <div class="overlay-image">
+                                <img src="assets/dltc/vhl1.jpg" alt="Hình ảnh Vịnh Hạ Long - 1">
+                                <img src="assets/dltc/vhl2.webp" alt="Hình ảnh Vịnh Hạ Long - 2">
+                                <img src="assets/dltc/vhl0.jpg" alt="Hình ảnh Vịnh Hạ Long - 3">
+                            </div>
+                            <div class="overlay-text">
+                                <p class="overlay-p">Vịnh Hạ Long nằm ở tỉnh Quảng Ninh, là di sản thiên nhiên thế giới được UNESCO công nhận. Nơi đây nổi tiếng với hàng nghìn hòn đảo lớn nhỏ, tạo thành một bức tranh thiên nhiên hùng vĩ và thơ mộng. Vịnh Hạ Long còn có nhiều hang động đẹp như Động Thiên Cung, Hang Đầu Gỗ, và các làng chài truyền thống, mang đến trải nghiệm văn hóa độc đáo.</p>
+                                <ul>
+                                    <li>Thể loại: Kì quan thiên nhiên</li>
+                                    <li>Địa điểm: Quảng Ninh </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img2">
+                <img src="assets/dltc/tamdao0.jpg" alt="" class="imgCover">
+                <img src="assets/dltc/tamdao0.jpg" alt="" class="imgMain" id="image2">
+                <p id="textimage2" class="text">Tam Đảo</p>
+                <div id="overlay2" class="overlay">
+                    <div class="overlay-content">
+                        <span class="close-button" data-target="overlay2">&times;</span>
+                        <div class="overlay-title">
+                            <h1>Tam Đảo</h1>
+                        </div>
+                        <div class="overlay-body">
+                            <div class="overlay-image">
+                                <img src="assets/dltc/tamdao1.jpg" alt="Hình ảnh Tam Đảo - 1">
+                                <img src="assets/dltc/tamdao0.jpg" alt="Hình ảnh Tam Đảo - 2">
+                                <img src="assets/dltc/tamdao2.jpg" alt="Hình ảnh Tam Đảo - 3">
+                            </div>
+                            <div class="overlay-text">
+                                <p class="overlay-p">Tam Đảo thuộc tỉnh Vĩnh Phúc, là khu nghỉ dưỡng lý tưởng nhờ khí hậu mát mẻ quanh năm. Nơi đây có cảnh quan thiên nhiên núi non trùng điệp, cùng các điểm tham quan nổi bật như Tháp truyền hình, Đền Bà Chúa Thượng Ngàn, Thác Bạc. Tam Đảo còn hấp dẫn với các món ăn đặc sản như su su, gà đồi.</p>
+                                <ul>
+                                    <li>Thể loại: Khu nghỉ dưỡng</li>
+                                    <li>Địa điểm: Vĩnh Phúc </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img3">
+                <img src="assets/dltc/trangan0.jpg" alt="" class="imgCover">
+                <img src="assets/dltc/trangan0.jpg" alt="" class="imgMain" id="image3">
+                <p class="text" id="textimage3">Tràng An</p>
+                <div id="overlay3" class="overlay">
+                    <div class="overlay-content">
+                        <span class="close-button" data-target="overlay3">&times;</span>
+                        <div class="overlay-title">
+                            <h1>Tràng An</h1>
+                        </div>
+                        <div class="overlay-body">
+                            <div class="overlay-image">
+                                <img src="assets/dltc/trangan0.jpg" alt="">
+                                <img src="assets/dltc/trangan1.jpg" alt="">
+                                <img src="assets/dltc/trangan2.jfif" alt="">
+                            </div>
+                            <div class="overlay-text">
+                                <p class="overlay-p">Quần thể danh thắng Tràng An ở Ninh Bình được UNESCO công nhận là di sản thế giới kép (văn hóa và thiên nhiên). Nơi đây có hệ thống hang động kỳ bí, sông nước trong xanh, và các di tích lịch sử như Đền Trình, Đền Trần, Phủ Khống. Tràng An là sự kết hợp hài hòa giữa thiên nhiên và văn hóa, là điểm đến hấp dẫn cho du khách trong nước và quốc tế.</p>
+                                <ul>
+                                    <li>Thể loại: Quần thể danh thắng</li>
+                                    <li>Địa điểm: Ninh Bình </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img4">
+                <img src="assets/dltc/sapa0.png" alt="" class="imgCover">
+                <img src="assets/dltc/sapa0.png" alt="" class="imgMain" id="image4">
+                <p class="text" id="textimage4">Sapa</p>
+                <div id="overlay4" class="overlay">
+                    <div class="overlay-content">
+                        <span class="close-button" data-target="overlay4">&times;</span>
+                        <div class="overlay-title">
+                            <h1>Sa pa</h1>
+                        </div>
+                        <div class="overlay-body">
+                            <div class="overlay-image">
+                                <img src="assets/dltc/sapa0.png" alt="">
+                                <img src="assets/dltc/sapa4.jfif" alt="">
+                                <img src="assets/dltc/Sapa3.jpg" alt="">
+                            </div>
+                            <div class="overlay-text">
+                                <p class="overlay-p">Sapa là thị trấn thuộc tỉnh Lào Cai, nằm ở độ cao khoảng 1.500 - 1.650m so với mực nước biển. Sapa nổi tiếng với cảnh quan núi non trùng điệp, ruộng bậc thang đẹp như tranh vẽ, và đỉnh Fansipan – nóc nhà Đông Dương. Nơi đây còn là nơi sinh sống của nhiều dân tộc thiểu số, mang đến nét văn hóa đa dạng và phong phú.</p>
+                                <ul>
+                                    <li>Thể loại: Thị trấn</li>
+                                    <li>Địa điểm: Lào Cai </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img5">
+                <img src="assets/dltc/chuayentu0.webp" alt="" class="imgCover">
+                <img src="assets/dltc/chuayentu0.webp" alt="" class="imgMain" id="image5">
+                <p class="text" id="textimage5">Chùa Yên Tử - Quảng Ninh</p>
+                <div id="overlay5" class="overlay">
+                    <div class="overlay-content">
+                        <span class="close-button" data-target="overlay5">&times;</span>
+                        <div class="overlay-title">
+                            <h1>Chùa Yên Tử</h1>
+                        </div>
+                        <div class="overlay-body">
+                            <div class="overlay-image">
+                                <img src="assets/dltc/yentu1.webp" alt="">
+                                <img src="assets/dltc/yentu2.webp" alt="">
+                                <img src="assets/dltc/yentu3.jpg" alt="">
+                            </div>
+                            <div class="overlay-text">
+                                <p class="overlay-p">Chùa Yên Tử thuộc tỉnh Quảng Ninh, được coi là "đất tổ Phật giáo Việt Nam". Đây là nơi vua Trần Nhân Tông tu hành và sáng lập thiền phái Trúc Lâm. Khu danh thắng Yên Tử không chỉ có giá trị tâm linh sâu sắc mà còn sở hữu cảnh quan thiên nhiên hùng vĩ, với con đường hành hương qua rừng núi và hệ thống chùa tháp cổ kính.</p>
+                                <ul>
+                                    <li>Thể loại: Chùa</li>
+                                    <li>Địa điểm: Quảng Ninh </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img6">
+                <img src="assets/dltc/mocchau0.jpg" alt="" class="imgCover">
+                <img src="assets/dltc/mocchau0.jpg" alt="" class="imgMain" id="image6">
+                <p class="text" id="textimage6">Cao nguyên Mộc Châu</p>
+                <div id="overlay6" class="overlay">
+                    <div class="overlay-content">
+                        <span class="close-button" data-target="overlay6">&times;</span>
+                        <div class="overlay-title">
+                            <h1>mộc châu</h1>
+                        </div>
+                        <div class="overlay-body">
+                            <div class="overlay-image">
+                                <img src="assets/dltc/mocchau3.webp" alt="">
+                                <img src="assets/dltc/mocchau1.webp" alt="">
+                                <img src="assets/dltc/mocchau2.webp" alt="">
+                            </div>
+                            <div class="overlay-text">
+                                <p class="overlay-p">Cao nguyên Mộc Châu thuộc tỉnh Sơn La, nổi tiếng với khí hậu trong lành, mát mẻ và vẻ đẹp thiên nhiên hoang sơ. Nơi đây có đồi chè xanh bạt ngàn, rừng thông bản Áng, thác Dải Yếm, và mùa hoa cải, hoa mận, hoa đào rực rỡ. Mộc Châu còn là nơi hội tụ nét văn hóa đặc sắc của các dân tộc thiểu số như Thái, Mông.</p>
+                                <ul>
+                                    <li>Thể loại: Cao Nguyên</li>
+                                    <li>Địa điểm: Sơn La </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="Central">
+            <div class="title">Miền Trung</div>
+            <div class="img1">
+                <img src="assets/dltc/thanhnhaho0.png" alt="" class="imgCover" loading="lazy">
+                <img src="assets/dltc/thanhnhaho0.png" alt="" class="imgMain" id="image7" loading="lazy">
+                <p id="textimage7" class="text">Thành nhà Hồ</p>
+                <div id="overlay7" class="overlay">
+                    <div class="overlay-content">
+                        <span class="close-button" data-target="overlay7">&times;</span>
+                        <div class="overlay-title">
+                            <h1>Thành nhà Hồ</h1>
+                        </div>
+                        <div class="overlay-body">
+                            <div class="overlay-image">
+                                <img src="assets/dltc/thanhnhaho(1).jpeg" alt="" loading="lazy">
+                                <img src="assets/dltc/thanhnhaho(2).jpg" alt="" loading="lazy">
+                                <img src="assets/dltc/thanhnhaho(3).jpeg" alt="" loading="lazy">
+                            </div>
+                            <div class="overlay-text">
+                                <p class="overlay-p">Thành nhà Hồ thuộc xã Vĩnh Long, huyện Vĩnh Lộc, tỉnh Thanh Hoá, nằm cách trung tâm thành phố 45km, cách Hà Nội 140km. Thành nhà Hồ Vĩnh Lộc từng là kinh đô của nước Việt Nam và hiện tại trở thành cảnh đẹp Thanh Hoá, được nhiều du khách ghé thăm. Thành nhà Hồ khi ấy có tên là thành Tây Đô, được vua Trần Nhân Tông giao cho quyền thần Hồ Quý Ly xây dựng vào năm 1397. Hồ Quý Ly cũng chính là người lập ra triều đại nhà Hồ vào năm 1400.</p>
+                                <ul>
+                                    <li>Thể loại: Di tích lịch sử</li>
+                                    <li>Địa điểm: Thanh Hóa </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img2">
+                <img src="assets/dltc/quebac0.png" alt="" class="imgCover" loading="lazy">
+                <img src="assets/dltc/quebac0.png" alt="" class="imgMain" id="image8" loading="lazy">
+                <p id="textimage8" class="text">Làng sen quê Bác</p>
+                <div id="overlay8" class="overlay">
+                    <div class="overlay-content">
+                        <span class="close-button" data-target="overlay8">&times;</span>
+                        <div class="overlay-title">
+                            <h1>Làng sen</h1>
+                        </div>
+                        <div class="overlay-body">
+                            <div class="overlay-image">
+                                <img src="assets/dltc/langsenquebac(2).jpeg" alt="" loading="lazy">
+                                <img src="assets/dltc/langsenquebac(3).jpeg" alt="" loading="lazy">
+                                <img src="assets/dltc/langsenquebac(1).jpg" alt="" loading="lazy">
+                            </div>
+                            <div class="overlay-text">
+                                <p class="overlay-p">Làng Sen hay còn có tên gọi khác là làng Kim Liên.. Cách TP Vinh khoảng 13km, làng Sen, xã Kim Liên, huyện Nam Đàn, quê hương của Chủ tịch Hồ Chí Minh được biết đến như một điểm du lịch nổi bật nhất của tỉnh Nghệ An, thu hút các du khách trong và ngoài nước. Nơi đây được xếp hạng Di tích quốc gia năm 1990 và đưa vào danh sách xếp hạng 23 Di tích Quốc gia đặc biệt năm 2012.</p>
+                                <ul>
+                                    <li>Thể loại: Di tích lịch sử</li>
+                                    <li>Địa điểm: Nghệ An </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img3">
+                <img src="assets/dltc/pnkb0.png" alt="" class="imgCover" loading="lazy">
+                <img src="assets/dltc/pnkb0.png" alt="" class="imgMain" id="image9" loading="lazy">
+                <p class="text" id="textimage9">Phong Nha - Kẽ Bàng</p>
+                <div id="overlay9" class="overlay">
+                    <div class="overlay-content">
+                        <span class="close-button" data-target="overlay9">&times;</span>
+                        <div class="overlay-title">
+                            <h2>Phong Nha Kẽ Bàng</h2>
+                        </div>
+                        <div class="overlay-body">
+                            <div class="overlay-image">
+                                <img src="assets/dltc/phongnhakebang(1).jpeg" alt="" loading="lazy">
+                                <img src="assets/dltc/phongnhakebang(2).jpeg" alt="" loading="lazy">
+                                <img src="assets/dltc/phongnhakebang(3).jpeg" alt="" loading="lazy">
+                            </div>
+                            <div class="overlay-text">
+                                <p class="overlay-p">Vườn quốc gia Phong Nha – Kẻ Bàng là một vườn quốc gia của Việt Nam, nằm tại huyện Bố Trạch và Minh Hóa, tỉnh Quãng Bình, cách thành phố Đồng Hới khoảng 50 km về phía Tây Bắc, cách thủ đô Hà Nội khoảng 500 km về phía nam. Diện tích vùng lõi của vườn quốc gia là 85.754 ha và một vùng đệm rộng 195.400 ha. Trong đó, có Động Phong Nha, là Di sản thiên nhiên thế giới được UNESCO công nhận, thuộc xã Sơn Trạch, huyện Bố Trạch, tỉnh Quảng Bình, cách thành phố Đồng Hới về phía Tây Bắc khoảng 45km</p>
+                                <ul>
+                                    <li>Thể loại: Vườn quốc gia</li>
+                                    <li>Địa điểm: Quãng Bình </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img4">
+                <img src="assets/dltc/cdh0.png" alt="" class="imgCover" loading="lazy">
+                <img src="assets/dltc/cdh0.png" alt="" class="imgMain" id="image10" loading="lazy">
+                <p class="text" id="textimage4">Cố đô Huế</p>
+                <div id="overlay10" class="overlay">
+                    <div class="overlay-content">
+                        <span class="close-button" data-target="overlay10">&times;</span>
+                        <div class="overlay-title">
+                            <h1>Cố đô Huế</h1>
+                        </div>
+                        <div class="overlay-body">
+                            <div class="overlay-image">
+                                <img src="assets/dltc/codohue(1).jpeg" alt="" loading="lazy"> 
+                                <img src="assets/dltc/codohue(2).jpeg" alt="" loading="lazy">
+                                <img src="assets/dltc/codohue(3).jpeg" alt="" loading="lazy">
+                            </div>
+                            <div class="overlay-text">
+                                <p class="overlay-p">Quần thể di tích Cố đô Huế hay Quần thể kiến trúc cố đô Huế là những di tích lịch sử-văn hóa do triều Nguyễn chủ trương xây dựng  trong khoảng thời gian từ đầu thế kye 19 đến nửa đầu thế kỷ 20 trên địa bàn kinh đôi Huế  xưa; nay thuộc phạm vi thành phố Huế và một vài vùng phụ cận thuộc tỉnh Thừa Thiên Huế, Việt Nam. Các quần thể này đượcUNESCO công nhận là Di sản Văn hóa Thế Giới vào ngày 11 tháng 12 năm 1993.</p>
+                                <ul>
+                                    <li>Thể loại: Di tích lịch sử</li>
+                                    <li>Địa điểm: Huế </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img5">
+                <img src="assets/dltc/pcha0.png" alt="" class="imgCover" loading="lazy">
+                <img src="assets/dltc/pcha0.png" alt="" class="imgMain" id="image11" loading="lazy">
+                <p class="text" id="textimage11">Phố cổ Hội An</p>
+                <div id="overlay11" class="overlay">
+                    <div class="overlay-content">
+                        <span class="close-button" data-target="overlay11">&times;</span>
+                        <div class="overlay-title">
+                            <h1>hội an</h1>
+                        </div>
+                        <div class="overlay-body">
+                            <div class="overlay-image">
+                                <img src="assets/dltc/phocohoian(1).jpeg" alt="" loading="lazy">
+                                <img src="assets/dltc/phocohoian(2).jpeg" alt="" loading="lazy">
+                                <img src="assets/dltc/phocohoian(3).jpeg" alt="" loading="lazy">
+                            </div>
+                            <div class="overlay-text">
+                                <p class="overlay-p">Hội An nằm phía hạ lưu sông Thu Bồn thuộc tỉnh Quảng Nam Việt Nam. Hội An là điểm du lịch nổi tiếng miền Trung mà ai cũng phải ghé qua. Nơi đây từng là bến cảng giao thương của nhiều quốc gia như: Trung Quốc, Nhật Bản, Tây Ban  Nha, Hà Lan nên lối kiến trúc và văn hoá nơi đây cũng chịu ảnh hưởng ít nhiều. Đặc trưng của Hội An để mọi người nhớ đến chính là những con phố cổ màu vàng, hoa giấy đỏ, hay những ngôi chùa mang đậm nét kiến trúc Trung Hoa. Hội An xứng đáng là cảnh đẹp bậc nhất miền Trung thu hút khách du lịch khắp thế giới. </p>
+                                <ul>
+                                    <li>Thể loại: phố cổ</li>
+                                    <li>Địa điểm: Quảng Nam </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img6">
+                <img src="assets/dltc/lison0.png" alt="" class="imgCover" loading="lazy">
+                <img src="assets/dltc/lison0.png" alt="" class="imgMain" id="image12" loading="lazy">
+                <p class="text" id="textimage12">Đảo Lý Sơn</p>
+                <div id="overlay12" class="overlay">
+                    <div class="overlay-content">
+                        <span class="close-button" data-target="overlay12">&times;</span>
+                        <div class="overlay-title">
+                            <h1>Đảo Lý Sơn</h1>
+                        </div>
+                        <div class="overlay-body">
+                            <div class="overlay-image">
+                                <img src="assets/dltc/daolyson(1).jpeg" alt="" loading="lazy">
+                                <img src="assets/dltc/daolyson(2).jpeg" alt="" loading="lazy">
+                                <img src="assets/dltc/daolyson(3).jpeg" alt="" loading="lazy">
+                            </div>
+                            <div class="overlay-text">
+                                <p class="overlay-p">Lý Sơn là một huyện đảo thuộc tỉnh Quãng Ngãi , Việt Nam. Trước đây, Lý Sơn được gọi là Cù lao Ré, theo cách lý giải của dân gian là “cù lao có nhiều cây Ré”. Hòn đảo là vết tích còn lại của một núi lửa với 5 miệng, được hình thành cách đây khoảng 25-30 triệu năm. 5 ngọn núi là nguồn giữ các mạch nước ngầm chính cung cấp nguồn nước cho toàn bộ người dân trên đảo .Diện tích của huyện Lý Sơn là 10,39 km², dân số năm 2019 là 22.174 người, mật độ dân số đạt 2.134 người/km².Gồm 2 đảo: đảo Lớn (Lý Sơn, hoặc gọi cù lao Ré), đảo Bé (cù lao Bờ Bãi) ở phía bắc đảo Lớn và hòn Mù Cu ở phía đông của đảo Lớn.</p>
+                                <ul>
+                                    <li>Thể loại: Danh lam thắng cảnh</li>
+                                    <li>Địa điểm: Quãng Ngãi </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="South">
+            <div class="title">Miền Nam</div>
+            <div class="img1">
+                <img src="assets/dltc/diadaocc0.png" alt="" class="imgCover">
+                <img src="assets/dltc/diadaocc0.png" alt="" class="imgMain" id="image13">
+                <p id="textimage13" class="text">Địa đạo Củ Chi</p>
+                <div id="overlay13" class="overlay">
+                    <div class="overlay-content">
+                        <span class="close-button" data-target="overlay13">&times;</span>
+                        <div class="overlay-title">
+                            <h1>Địa đảo Củ Chi</h1>
+                        </div>
+                        <div class="overlay-body">
+                            <div class="overlay-image">
+                                <img src="assets/dltc/cuchi1.jpg" alt="">
+                                <img src="assets/dltc/cuchi2.jpg" alt="">
+                                <img src="assets/dltc/cuchi3.jpg" alt="">
+                            </div>
+                            <div class="overlay-text">
+                                <p class="overlay-p">Địa đạo Củ Chi là một hệ thống phòng thủ trong lòng đất ở huyện Củ Chi, cách Thành phố Hồ Chí Minh 69 km về hướng tây-bắc. Hệ thống này được quân kháng chiến Việt Minh và Mặt trận Dân tộc Giải phóng miền Nam Việt Nam đào trong thời kỳ Chiến tranh Đông Dương và Chiến tranh Việt Nam. Hệ thống địa đạo bao gồm bệnh xá, nhiều phòng ở, nhà bếp, kho chứa, phòng làm việc, hệ thống đường ngầm dưới lòng đất, dài khoảng 250 km và có các hệ thống thông hơi tại vị trí các bụi cây. Địa đạo Củ Chi được xây dựng ở điểm cuối Đường mòn Hồ Chí Minh, trên vùng đất được mệnh danh là "đất thép" để ca ngợi ý chí phòng thủ kiên cường của quân dân nơi đây. Trong Chiến dịch Tết Mậu Thân 1968, quân Giải phóng miền Nam đã xuất phát từ hệ thống địa đạo này để tấn công vào Sài Gòn.</p>
+                                <ul>
+                                    <li>Thể loại: Di tích lịch sử</li>
+                                    <li>Địa điểm: TP Hồ Chí Minh</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img2">
+                <img src="assets/dltc/vungtau.png" alt="" class="imgCover" loading="lazy">
+                <img src="assets/dltc/vungtau.png" alt="" class="imgMain" id="image14" loading="lazy">
+                <p id="textimage14" class="text">Vũng Tàu</p>
+                <div id="overlay14" class="overlay">
+                    <div class="overlay-content">
+                        <span class="close-button" data-target="overlay14">&times;</span>
+                        <div class="overlay-title">
+                            <h1>Vũng Tàu</h1>
+                        </div>
+                        <div class="overlay-body">
+                            <div class="overlay-image">
+                                <img src="assets/dltc/vungtau1.jpg" alt="" loading="lazy">
+                                <img src="assets/dltc/vungtau2.jpg" alt="" loading="lazy">
+                                <img src="assets/dltc/vungtau.png" alt="" loading="lazy">
+                            </div>
+                            <div class="overlay-text">
+                                <p class="overlay-p">Vũng Tàu là một thành phố thuộc tỉnh Bà Rịa – Vũng Tàu, vùng Đông Nam Bộ, Việt Nam. Đây là trung tâm kinh tế, tài chính, văn hóa, du lịch, và là một trong những trung tâm kinh tế của tỉnh và vùng kinh tế trọng điểm phía Nam. Sở hữu hai ngọn núi Lớn-Nhỏ, nhiều bãi biển đẹp hữu tình và khí hậu ấm áp quanh năm, Vũng Tàu là một địa điểm du lịch nổi tiếng tại miền Nam với nhiều địa điểm như Tượng Chúa Kitô Vua (Vũng Tàu), Bãi Sau, Bãi Trước, Thích Ca Phật Đài...Vũng Tàu nằm cách cách Thành phố Hồ Chí Minh khoảng 88 km về phía Tây Nam. Dân số năm 2022 vào khoảng 530.025 người sinh sống tại 16 phường và 1 xã.</p>
+                                <ul>
+                                    <li>Thể loại: Thành phố</li>
+                                    <li>Địa điểm: Bà Rịa - Vũng Tàu</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img3">
+                <img src="assets/dltc/chonoicr0.png" alt="" class="imgCover" loading="lazy">
+                <img src="assets/dltc/chonoicr0.png" alt="" class="imgMain" id="image15" loading="lazy">
+                <p class="text" id="textimage15">Chợ nổi Cái Răng</p>
+                <div id="overlay15" class="overlay">
+                    <div class="overlay-content">
+                        <span class="close-button" data-target="overlay15">&times;</span>
+                        <div class="overlay-title">
+                            <h2>Chợ nổi Cái Răng</h2>
+                        </div>
+                        <div class="overlay-body">
+                            <div class="overlay-image">
+                                <img src="assets/dltc/chonoicairang1.jpg" alt="" loading="lazy">
+                                <img src="assets/dltc/chonoicairang2.jpg" alt="" loading="lazy">
+                                <img src="assets/dltc/chonoicairang3.jpg" alt="" loading="lazy">
+                            </div>
+                            <div class="overlay-text">
+                                <p class="overlay-p">Chợ Nổi Cái Răng là một trong những chợ nổi nổi tiếng và đặc trưng nhất của vùng Đồng bằng sông Cửu Long, thuộc thành phố Cần Thơ, miền Tây Nam Bộ, Việt Nam. Chợ này không chỉ là nơi trao đổi hàng hóa mà còn là một nét văn hóa đặc sắc của miền Tây, thu hút đông đảo du khách trong và ngoài nước đến tham quan.</p>
+                                <ul>
+                                    <li>Thể loại: Chợ</li>
+                                    <li>Địa điểm: Cần Thơ </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img4">
+                <img src="assets/dltc/phuquoc0.png" alt="" class="imgCover" loading="lazy">
+                <img src="assets/dltc/phuquoc0.png" alt="" class="imgMain" id="image16" loading="lazy">
+                <p class="text" id="textimage16">Phú Quốc</p>
+                <div id="overlay16" class="overlay">
+                    <div class="overlay-content">
+                        <span class="close-button" data-target="overlay16">&times;</span>
+                        <div class="overlay-title">
+                            <h1>Phú Quốc</h1>
+                        </div>
+                        <div class="overlay-body">
+                            <div class="overlay-image">
+                                <img src="assets/dltc/phuquoc1.jpg" alt="" loading="lazy">
+                                <img src="assets/dltc/phuquoc2.jpg" alt="" loading="lazy">
+                                <img src="assets/dltc/phuquoc3.jpg" alt="" loading="lazy">
+                            </div>
+                            <div class="overlay-text">
+                                <p class="overlay-p">Phú Quốc là thành phố đảo trực thuộc tỉnh Kiên Giang, Việt Nam. Đảo Phú Quốc cùng các đảo nhỏ lân cận và quần đảo Thổ Chu hợp lại tạo thành Thành phố Phú Quốc ở vịnh Thái Lan, đây là thành phố đảo đầu tiên được thành lập của Việt Nam. Đảo Phú Quốc nằm trong vịnh Thái Lan, phía Tây Nam của Việt Nam. Phú Quốc cách thành phố Rạch Giá 120 km và cách thành phố Hà Tiên 45 km. Nhìn trên bản đồ, Phú Quốc có hình dáng con cá đang vẫy đuôi trong vịnh Thái Lan.</p>
+                                <ul>
+                                    <li>Thể loại: Danh lam thắng cảnh</li>
+                                    <li>Địa điểm: Kiên Giang </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img5">
+                <img src="assets/dltc/nuicc0.png" alt="" class="imgCover">
+                <img src="assets/dltc/nuicc0.png" alt="" class="imgMain" id="image17">
+                <p class="text" id="textimage17">Núi Chứa Chan</p>
+                <div id="overlay17" class="overlay">
+                    <div class="overlay-content">
+                        <span class="close-button" data-target="overlay17">&times;</span>
+                        <div class="overlay-title">
+                            <h1>Núi Chứa Chan</h1>
+                        </div>
+                        <div class="overlay-body">
+                            <div class="overlay-image">
+                                <img src="assets/dltc/nuichuachan1.jpg" alt="">
+                                <img src="assets/dltc/nuichuachan2.jpg" alt="">
+                                <img src="assets/dltc/nuichuachan3.jpg" alt="">
+                            </div>
+                            <div class="overlay-text">
+                                <p class="overlay-p">Núi Chứa Chan còn có tên gọi khác là núi Gia Lào hay núi Gia Ray, núi tọa lạc tại thị trấn Gia Ray, huyện Xuân Lộc, và cách Thành Phố Hồ Chí Minh khoảng 100km. Núi có chiều cao khoảng 837m so với mực nước biển, cao thứ nhì Đông Nam Bộ sau núi Bà Đen Tây Ninh. Do có chiều cao như vậy nên nó còn được mệnh danh là “Nóc nhà Đồng Nai”, ngoài ra nơi này điểm đến của nhiều bạn trẻ đam mê khám phá và trekking, cắm trại cũng như du khách đến núi tham quan và chiêm bái chùa Gia Lào trên núi.
+                                     </p>
+                                <ul>
+                                    <li>Thể loại: Kì quan thiên nhiên</li>
+                                    <li>Địa điểm: Đồng Nai </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="img6">
+                <img src="assets/dltc/tlty0.png" alt="" class="imgCover" loading="lazy">
+                <img src="assets/dltc/tlty0.png" alt="" class="imgMain" id="image18" loading="lazy">
+                <p class="text" id="textimage18">Thung lũng tình yêu</p>
+                <div id="overlay18" class="overlay">
+                    <div class="overlay-content">
+                        <span class="close-button" data-target="overlay18">&times;</span>
+                        <div class="overlay-title">
+                            <h1>Thung lũng tình yêu</h1>
+                        </div>
+                        <div class="overlay-body">
+                            <div class="overlay-image">
+                                <img src="assets/dltc/thunglungtinhyeu1.jpg" alt="" loading="lazy">
+                                <img src="assets/dltc/thunglungtinhyeu2.jpg" alt="" loading="lazy">
+                                <img src="assets/dltc/thunglungtinhyeu3.jpg" alt="" loading="lazy">
+                            </div>
+                            <div class="overlay-text">
+                                <p class="overlay-p">Thung Lũng Tình Yêu không là cái tên quá mới trong bản đồ du lịch Đà Lạt thế nhưng lại chưa bao giờ thôi HOT. Nằm sâu bên trong sườn đồi, xung quanh là rừng thông xanh rợp bóng quanh năm, thung lũng này như một bản tình ca đẹp đang chờ đợi những người lữ khách tới để rung lên những khúc nhạc tình yêu.</p>
+                                <ul>
+                                    <li>Thể loại: Danh lam thắng cảnh</li>
+                                    <li>Địa điểm: Lâm Đồng</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="About">
+        <div class="sectionAbout">
+            <h1 class="title">Thành viên</h1>
+            <div class="item1">
+                <a href="https://www.facebook.com/khanhlewh/" target="_blank">
+                    <img src="assets/member/khanh.png" alt="" loading="lazy">
+                </a>
+                <p>Hoàng Lê Khanh</p>
+            </div>
+            <div class="item2">
+            <a href="https://www.facebook.com/khanhlewh/" target="_blank">
+                <img src="assets/member/dat.png" alt="" loading="lazy">
+            </a>
+                <p>Nguyễn Tiến Đạt</p>
+            </div>
+            <div class="item3">
+            <a href="https://www.facebook.com/khanhlewh/" target="_blank">
+                <img src="assets/member/luam.png" alt="" loading="lazy">
+            </a>
+                <p>Nguyễn Mạnh Luận</p>
+            </div>
+            <div class="item4">
+            <a href="https://www.facebook.com/khanhlewh/" target="_blank">
+                <img src="assets/member/kiet.png" alt="" loading="lazy">
+            </a>
+                <p>Trương Anh Kiệt</p>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        Bản quyền thuộc tổ chúng tôi. Không sao chép dưới mọi hình thức
+    </div>
+    
+    <script src="script.js" async> </script>
+</body>
+</html>
